@@ -3,62 +3,165 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aniket Chavan Portfolio</title>
-<link rel="stylesheet" href="style.css">
+<title>Aniket Portfolio</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+nav {
+  background: #111;
+  padding: 15px;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav a {
+  color: white;
+  margin: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #00ffcc;
+}
+
+/* SECTIONS */
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(to right, #000, #333);
+  color: white;
+}
+
+.profile {
+  width: 180px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+/* CARDS */
+.card {
+  background: white;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* IMAGES */
+.gallery img, .achievements img {
+  width: 250px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+/* DARK MODE */
+.dark {
+  background: #111;
+  color: white;
+}
+
+/* BUTTON */
+button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+}
+</style>
+
 </head>
+
 <body>
 
-<header>
+<!-- NAVBAR -->
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#achievements">Achievements</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="hero">
   <h1>Aniket Suresh Chavan</h1>
-  <button onclick="toggleMode()">🌙</button>
-</header>
-
-<section class="home">
   <img src="assets/images/profile.png" class="profile">
-  <p>Hi, I’m a CSE student at MIT VPU, passionate about teaching, leadership and technology.</p>
+  <p>CSE Student | Mentor | Leader</p>
 </section>
 
-<section>
+<!-- ABOUT -->
+<section id="about">
   <h2>About Me</h2>
-  <p>I am a first-year Computer Science Engineering student. I have mentored NEET and JEE students and love teaching biology. I also have leadership and administrative skills.</p>
-  <p>Goal: To become a preventive officer.</p>
+  <p>I am a first-year Computer Science Engineering student at MIT VPU.</p>
+  <p>I have mentored NEET and JEE students and love teaching biology.</p>
+  <p>I have leadership and administrative skills and interest in business.</p>
+  <p><b>Goal:</b> To become a preventive officer.</p>
 </section>
 
-<section>
-  <h2>Skills</h2>
-  <ul>
-    <li>Leadership</li>
-    <li>Teaching (NEET & JEE)</li>
-    <li>Administration</li>
-    <li>Drumming</li>
-    <li>Business mindset</li>
-  </ul>
-</section>
-
-<section>
+<!-- PROJECTS -->
+<section id="projects">
   <h2>Projects</h2>
-  <p>Disease Awareness Project</p>
-  <p>Construction Waste Recycling Prototype</p>
-  <p>Ceramic Tile Recycling Project</p>
+
+  <div class="card">
+    <h3>Disease Awareness Project</h3>
+    <p>Focused on spreading awareness about diseases and prevention.</p>
+  </div>
+
+  <div class="card">
+    <h3>Construction Waste Recycling</h3>
+    <p>Prototype for recycling construction materials.</p>
+  </div>
+
+  <div class="card">
+    <h3>Ceramic Tile Recycling</h3>
+    <p>Chemistry project on reusing ceramic tiles.</p>
+  </div>
+
 </section>
 
-<section>
+<!-- ACHIEVEMENTS -->
+<section id="achievements" class="achievements">
   <h2>Achievements</h2>
-  <img src="assets/images/certificate1.jpg" width="300">
+  <img src="assets/images/certificate1.jpg">
   <p>Chemistry Course Certificate</p>
 </section>
 
-<section>
+<!-- GALLERY -->
+<section id="gallery" class="gallery">
   <h2>Gallery</h2>
-  <img src="assets/images/teaching.jpg" width="200">
-  <img src="assets/images/drumming.jpg" width="200">
+  <img src="assets/images/teaching.jpg">
+  <img src="assets/images/drumming.jpg">
 </section>
 
-<section>
+<!-- CONTACT -->
+<section id="contact">
   <h2>Contact</h2>
   <p>Email: anubobby1406@gmail.com</p>
 </section>
 
-<script src="script.js"></script>
+<!-- DARK MODE BUTTON -->
+<button onclick="toggleMode()">🌙</button>
+
+<script>
+function toggleMode(){
+  document.body.classList.toggle("dark");
+}
+</script>
+
 </body>
 </html>
